@@ -244,11 +244,16 @@
     background: #000;
     aspect-ratio: 16/9;
   }
-  .spotlight-video iframe {
+  .spotlight-video video,
+  .work-thumb video {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     border: 0;
     display: block;
+    object-fit: contain;
+    background: #000;
   }
   .spotlight-info {
     padding: 44px 40px;
@@ -316,6 +321,7 @@
     overflow: hidden;
   }
   .work-thumb {
+    position: relative;
     aspect-ratio: 4/3;
     background: linear-gradient(135deg, #1A1A1A, #0A0A0A);
     display: flex;
@@ -462,17 +468,21 @@
     <div class="work-grid">
       <div class="work-card">
         <div class="work-thumb" style="aspect-ratio: 9/16; padding: 0;">
-          <iframe style="width:100%; height:100%; border:0; display:block;" src="https://www.youtube.com/embed/P4n9sqztxxM" title="Moo Goo case study" allowfullscreen></iframe>
+          <video controls playsinline preload="metadata" poster="assets/videos/moogoo-poster.jpg" aria-label="Moo Goo sample product content" title="Moo Goo sample product content">
+            <source src="assets/videos/moogoo.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="work-body">
-          <div class="mono">Moo Goo</div>
+          <div class="mono">Moo Goo &middot; Sample</div>
           <h3>Product feature</h3>
-          <p>UGC-style content created for Moo Goo.</p>
+          <p>Sample UGC-style product content, created to showcase our style.</p>
         </div>
       </div>
       <div class="work-card">
         <div class="work-thumb" style="aspect-ratio: 9/16; padding: 0;">
-          <iframe style="width:100%; height:100%; border:0; display:block;" src="https://www.youtube.com/embed/6yxaFrH7gZk" title="Voyora Concierge collaboration" allowfullscreen></iframe>
+          <video controls playsinline preload="metadata" poster="assets/videos/voyora-concierge-poster.jpg" aria-label="Voyora Concierge medical tourism campaign" title="Voyora Concierge medical tourism campaign">
+            <source src="assets/videos/voyora-concierge.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="work-body">
           <div class="mono">Voyora Concierge &middot; Paid Partnership</div>
@@ -482,12 +492,14 @@
       </div>
       <div class="work-card">
         <div class="work-thumb" style="aspect-ratio: 9/16; padding: 0;">
-          <iframe style="width:100%; height:100%; border:0; display:block;" src="https://www.youtube.com/embed/6l9J1-g1yc0" title="Adidas UGC content" allowfullscreen></iframe>
+          <video controls playsinline preload="metadata" poster="assets/videos/adidas-poster.jpg" aria-label="Adidas concept product content" title="Adidas concept product content">
+            <source src="assets/videos/adidas.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="work-body">
-          <div class="mono">Adidas</div>
+          <div class="mono">Adidas &middot; Concept</div>
           <h3>UGC-style product content</h3>
-          <p>Native, creator-style content built to feel organic in-feed rather than like a traditional ad.</p>
+          <p>Concept UGC-style product content, created to showcase our style.</p>
         </div>
       </div>
     </div>
